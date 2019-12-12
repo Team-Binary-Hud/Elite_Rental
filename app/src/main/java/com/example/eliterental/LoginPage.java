@@ -21,8 +21,10 @@ public class LoginPage extends AppCompatActivity {
         TextView username = findViewById(R.id.usernametext);
         TextView password = findViewById(R.id.passwordtext);
         if(username.getText() == UsernameExample){
+            //would check if username is in database
             if(password.getText() == PasswordExample){
                 logintext.setText("Login Correct");
+                //check to see if password is equal to password saved to associated account
             } else {
                 logintext.setText("Login Incorrect");
             }
