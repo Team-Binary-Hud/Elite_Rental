@@ -7,8 +7,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginPage extends AppCompatActivity {
-    CharSequence UsernameExample = "Name123";
-    CharSequence PasswordExample = "password";
+    String UsernameExample = "Name123";
+    String PasswordExample = "password";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
