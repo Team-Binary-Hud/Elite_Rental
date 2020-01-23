@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SearchPage"></activity>
-        <activity android:name=".RegisterPage" />
+        <activity android:name=".RegisterPage"><meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".StartPage" /></activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginPage" />
+        <activity android:name=".LoginPage"><meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".StartPage" /></activity>
         <activity
             android:name=".SplashPage"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
