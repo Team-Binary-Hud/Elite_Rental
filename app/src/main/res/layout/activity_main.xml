@@ -1,74 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/LoginText"
+        android:id="@+id/MainPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Main Page"
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:layout_below="@+id/LoginText"
+    <Button
+        android:id="@+id/Search_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openSearchPage"
+        android:text="Search Page "
         android:layout_marginTop="30dp"
+        android:layout_below="@+id/MainPageText"
         android:layout_centerHorizontal="true"/>
 
-    <TextView
-        android:id="@+id/LoginText2"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/locations_button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Username"
-        android:layout_below="@+id/imageView"
+        android:onClick="openMapsPage"
+        android:text="Locations Page "
         android:layout_marginTop="30dp"
-        android:layout_alignLeft="@+id/imageView" />
-
-    <EditText
-        android:id="@+id/usernametext"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/LoginText2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:inputType="textPersonName" />
-
-    <TextView
-        android:id="@+id/LoginText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/usernametext"
-        android:layout_alignLeft="@+id/imageView"
-        android:layout_marginTop="30dp"
-        android:text="Password" />
-
-    <EditText
-        android:id="@+id/passwordtext"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:layout_below="@id/LoginText3"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:inputType="textPassword" />
+        android:layout_below="@+id/Search_button"
+        android:layout_centerHorizontal="true"/>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/accounts_button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="checkLoginDetails"
-        android:text="NEXT"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/passwordtext"
+        android:onClick="openAccountsPage"
+        android:text="Accounts Page "
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/locations_button"
         android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
