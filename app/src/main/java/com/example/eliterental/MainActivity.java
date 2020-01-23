@@ -2,6 +2,7 @@ package com.example.eliterental;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openSearchPage(View view) {
+        Intent intentSearch = new Intent(this, SearchPage.class);
+        startActivity(intentSearch);
     }
 
     public void openMapsPage(View view) {
