@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">EliteRental</string>
+    <string name="title_activity_list_view_rental">ListViewRental</string>
 </resources>

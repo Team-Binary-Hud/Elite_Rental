@@ -4,15 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchPage">
-
-    <ViewStub
-        android:id="@+id/car_list_stub"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:inflatedId="@+id/showlayout"
-        android:layout="@layout/activity_car_search" />
-
+    tools:context=".CarSearch">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
