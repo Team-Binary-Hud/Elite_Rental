@@ -9,11 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".ListViewRental"
-            android:label="@string/title_activity_list_view_rental"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".SearchPage" />
+        <activity android:name=".RentalPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SearchPage" />
+        </activity>
+        <activity android:name=".SearchPage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity android:name=".RegisterPage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
