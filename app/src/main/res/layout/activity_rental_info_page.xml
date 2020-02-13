@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RentalInfoPage">
+
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="fill_parent"
+    android:layout_height="300dp"
+    app:srcCompat="@mipmap/ic_launcher" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/CarName"
+    android:text="CarName"
+    android:layout_below="@id/imageView"
+    android:textStyle="bold"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="15dp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/CarPrice"
+    android:text="£00.00 pm"
+    android:textStyle="bold"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_alignParentRight="true"
+    android:layout_below="@id/CarName"
+    android:layout_marginTop="3dp"
+    android:layout_marginRight="15dp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/CarType"
+    android:text="CarType"
+    android:textStyle="italic"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:layout_below="@id/CarPrice"
+    android:layout_marginTop="3dp"
+    android:layout_marginLeft="15dp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/CarLocation"
+    android:text="Location"
+    android:textStyle="italic"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:layout_below="@id/CarType"
+    android:layout_marginTop="3dp"
+    android:layout_marginLeft="15dp" />
+<ImageView
+    android:id="@+id/ManufacImg"
+    android:layout_width="20dp"
+    android:layout_height="20sp"
+    app:srcCompat="@mipmap/ic_launcher"
+    android:layout_below="@id/CarLocation"
+    android:layout_marginTop="3dp"
+    android:layout_marginLeft="15dp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/CarManufac"
+    android:text="Manufacturer"
+    android:textStyle="italic"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:layout_below="@id/CarLocation"
+    android:layout_toRightOf="@+id/ManufacImg"
+    android:layout_marginTop="3dp"
+    android:layout_marginLeft="10dp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/CarYear"
+    android:text="2020"
+    android:textStyle="italic"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:layout_below="@id/CarPrice"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="3dp"
+    android:layout_marginRight="15dp" />
+<ImageView
+    android:id="@+id/ColourImg"
+    android:layout_width="20dp"
+    android:layout_height="20sp"
+    android:layout_below="@id/CarLocation"
+    app:srcCompat="@mipmap/ic_launcher"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="3dp"
+    android:layout_marginRight="15dp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/CarColour"
+    android:text="Colour"
+    android:textStyle="italic"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:layout_below="@id/CarLocation"
+    android:layout_toLeftOf="@+id/ColourImg"
+    android:layout_marginTop="3dp"
+    android:layout_marginRight="10dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/CarColour"
+        android:layout_alignParentRight="true"
+        android:text="Rent"
+        android:layout_margin="5dp"/>
+</RelativeLayout>
