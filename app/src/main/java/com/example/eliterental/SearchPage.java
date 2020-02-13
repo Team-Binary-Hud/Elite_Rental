@@ -47,7 +47,7 @@ public class SearchPage extends AppCompatActivity {
     };
 
     public void ViewRentalPage() {
-        Intent intent_rental = new Intent(this, RentalPage.class);
+        Intent intent_rental = new Intent(this, RentalInfoPage.class);
         startActivity(intent_rental);
     }
 }

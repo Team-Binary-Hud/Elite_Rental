@@ -9,11 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RentalPage" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SearchPage" />
-        </activity>
+        <activity android:name=".RentalInfoPage"></activity>
         <activity android:name=".SearchPage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
