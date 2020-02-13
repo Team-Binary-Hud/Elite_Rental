@@ -17,6 +17,5 @@ public class RentalInfoPage extends AppCompatActivity {
     public void openConfirm(View view) {
         Intent intentConfrim = new Intent(this, ConfirmPage.class);
         startActivity(intentConfrim);
-
     }
 }

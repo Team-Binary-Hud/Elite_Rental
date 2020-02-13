@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
+        android:layout_centerHorizontal="true"
         android:text="Confirm Rental"
         android:textAppearance="?android:attr/textAppearanceLarge"
         tools:ignore="MissingConstraints" />
@@ -19,9 +20,11 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Confirm"
         android:layout_below="@+id/tc_text"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="confrimCar"
+        android:text="Confirm"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -29,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:text="@string/Terms"
+        android:layout_centerHorizontal="true"
         android:scrollbars="vertical"
         android:layout_margin="10dp"
         android:layout_below="@+id/title"/>
