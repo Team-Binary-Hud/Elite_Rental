@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="openAccountsPage"
-        android:text="Accounts Page"
+        android:text="Account Page"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/locations_button"
         android:layout_centerHorizontal="true"/>

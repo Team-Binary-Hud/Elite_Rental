@@ -17,8 +17,7 @@
     android:id="@+id/CarName"
     android:text="CarName"
     android:layout_below="@id/imageView"
-    android:textStyle="bold"
-    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:textAppearance="?android:attr/textAppearanceLarge"
     android:layout_marginTop="10dp"
     android:layout_marginLeft="15dp" />
 <TextView
@@ -26,7 +25,6 @@
     android:layout_height="wrap_content"
     android:id="@+id/CarPrice"
     android:text="£00.00 pm"
-    android:textStyle="bold"
     android:textAppearance="?android:attr/textAppearanceMedium"
     android:layout_alignParentRight="true"
     android:layout_below="@id/CarName"
@@ -37,36 +35,53 @@
     android:layout_height="wrap_content"
     android:id="@+id/CarType"
     android:text="CarType"
-    android:textStyle="italic"
-    android:textAppearance="?android:attr/textAppearanceSmall"
-    android:layout_below="@id/CarPrice"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_below="@id/CarYear"
     android:layout_marginTop="3dp"
     android:layout_marginLeft="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CarSeatsInfo"
+        android:text="Number of Seats: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@id/CarType"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CarSeatsNum"
+        android:text="5"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@id/CarType"
+        android:layout_toRightOf="@+id/CarSeatsInfo"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="15dp" />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/CarLocation"
     android:text="Location"
-    android:textStyle="italic"
-    android:textAppearance="?android:attr/textAppearanceSmall"
-    android:layout_below="@id/CarType"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_below="@id/CarSeatsInfo"
     android:layout_marginTop="3dp"
     android:layout_marginLeft="15dp" />
 <ImageView
     android:id="@+id/ManufacImg"
     android:layout_width="20dp"
     android:layout_height="20sp"
-    app:srcCompat="@mipmap/ic_launcher"
+    app:srcCompat="@drawable/circle"
     android:layout_below="@id/CarLocation"
     android:layout_marginTop="3dp"
-    android:layout_marginLeft="15dp" />
+    android:layout_marginLeft="15dp"
+    tools:ignore="VectorDrawableCompat" />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/CarManufac"
     android:text="Manufacturer"
-    android:textStyle="italic"
-    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textAppearance="?android:attr/textAppearanceMedium"
     android:layout_below="@id/CarLocation"
     android:layout_toRightOf="@+id/ManufacImg"
     android:layout_marginTop="3dp"
@@ -76,32 +91,29 @@
     android:layout_height="wrap_content"
     android:id="@+id/CarYear"
     android:text="2020"
-    android:textStyle="italic"
-    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textAppearance="?android:attr/textAppearanceMedium"
     android:layout_below="@id/CarPrice"
-    android:layout_alignParentRight="true"
     android:layout_marginTop="3dp"
-    android:layout_marginRight="15dp" />
+    android:layout_marginLeft="15dp" />
 <ImageView
     android:id="@+id/ColourImg"
     android:layout_width="20dp"
     android:layout_height="20sp"
-    android:layout_below="@id/CarLocation"
-    app:srcCompat="@mipmap/ic_launcher"
-    android:layout_alignParentRight="true"
+    android:layout_below="@id/CarManufac"
+    app:srcCompat="@drawable/circle"
     android:layout_marginTop="3dp"
-    android:layout_marginRight="15dp" />
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="10dp"
+    tools:ignore="VectorDrawableCompat" />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/CarColour"
     android:text="Colour"
-    android:textStyle="italic"
-    android:textAppearance="?android:attr/textAppearanceSmall"
-    android:layout_below="@id/CarLocation"
-    android:layout_toLeftOf="@+id/ColourImg"
-    android:layout_marginTop="3dp"
-    android:layout_marginRight="10dp" />
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_below="@id/CarManufac"
+    android:layout_toRightOf="@+id/ColourImg"
+    android:layout_marginTop="3dp" />
 
     <Button
         android:layout_width="100dp"
