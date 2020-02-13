@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +29,6 @@ public class StartPage extends AppCompatActivity implements PopupMenu.OnMenuItem
             }
         });
 
-
         toLogin = findViewById(R.id.toLogin);
         toLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,48 +38,48 @@ public class StartPage extends AppCompatActivity implements PopupMenu.OnMenuItem
         });
     }
 
-    public void openLoginPage(){
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_startpage, menu);
+        return true;
+    }
+
+    public void openLoginPage() {
         Intent intentLogin = new Intent(this, LoginPage.class);
         startActivity(intentLogin);
     }
 
-    public void openRegisterPage(){
+    public void openRegisterPage() {
         Intent intentRegister = new Intent(this, RegisterPage.class);
         startActivity(intentRegister);
     }
 
-    public void popUp(View v){
-        PopupMenu popupMenu = new PopupMenu(this, v);
-        popupMenu.setOnMenuItemClickListener(this);
-        popupMenu.inflate(R.menu.popup_startpage);
-        popupMenu.show();
-    }
-
     @Override
     public boolean onMenuItemClick(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.item_1:
-                Toast.makeText(this,"Item 1 clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Item 1 clicked", Toast.LENGTH_SHORT).show();
                 return true;
 
             case R.id.item_2:
-                Toast.makeText(this,"Item 2 clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Item 2 clicked", Toast.LENGTH_SHORT).show();
                 return true;
 
             case R.id.item_3:
-                Toast.makeText(this,"Item 3 clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Item 3 clicked", Toast.LENGTH_SHORT).show();
                 return true;
 
             case R.id.item_4:
-                Toast.makeText(this,"Item 4 clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Item 4 clicked", Toast.LENGTH_SHORT).show();
                 return true;
 
             case R.id.item_5:
-                Toast.makeText(this,"Item 5 clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Item 5 clicked", Toast.LENGTH_SHORT).show();
                 return true;
 
-                default:
-                    return false;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }
