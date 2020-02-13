@@ -1,5 +1,13 @@
 <resources>
+    <<<<<<< HEAD
+    <string name="item_1">Item 1</string>
+    <string name="item_2">Item 2</string>
+    <string name="item_3">Item 3</string>
+    <string name="item_4">Item 4</string>
+    <string name="item_5">Item 5</string>
+=======
     <string name="app_name">EliteRental</string>
     <string name="title_activity_list_view_rental">ListViewRental</string>
     <string name="title_activity_rental_page">RentalPage</string>
+>>>>>>> 3dec1d0d4f5a8a71ec5c125bda933251cb9e637f
 </resources>
