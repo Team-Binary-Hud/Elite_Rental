@@ -43,4 +43,14 @@
         android:layout_below="@+id/locations_button"
         android:layout_centerHorizontal="true"/>
 
+    <Button
+        android:id="@+id/pastRentals_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openPastRentalsPage"
+        android:text="Previous Rentals"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/accounts_button"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

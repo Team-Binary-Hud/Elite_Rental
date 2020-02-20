@@ -10,10 +10,10 @@ public class RentalRecipt extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rental_recipt);
+        setContentView(R.layout.activity_receipt);
     }
 
-    public void CloseRecipt(View view){
-        //
+    public void closeReceipt(View view) {
+        setContentView(R.layout.activity_main);
     }
 }

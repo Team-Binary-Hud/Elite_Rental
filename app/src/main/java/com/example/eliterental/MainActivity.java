@@ -27,4 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openAccountsPage(View view) {
     }
+
+    public void openPastRentalsPage(View view) {
+    }
 }
