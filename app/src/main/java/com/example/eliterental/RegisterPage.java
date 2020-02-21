@@ -1,8 +1,5 @@
 package com.example.eliterental;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,8 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class RegisterPage extends AppCompatActivity {
     private EditText Name;
@@ -36,9 +33,12 @@ public class RegisterPage extends AppCompatActivity {
         Register = findViewById(R.id.RegisterPageTitle);
 
         RegisterButton.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View v) {
-                passwordChecker();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    credentialChecker();
+                }
             }
         });
     }
@@ -67,18 +67,31 @@ public class RegisterPage extends AppCompatActivity {
         return false;
     }
 
+    public boolean emailStringCheck() {
+        char ch;
+        boolean email = false;
+
+        String emailText = Email.getText().toString();
+        if (!emailText.startsWith("@") || !emailText.endsWith("@") || emailText.contains("@") || emailText.length() > 6 || emailText.contains(".com") || emailText.contains(".co.uk")){
+            email = true;
+        }
+
+        if (email) return true;
+        else return false;
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    public void passwordChecker() {
+    public void credentialChecker() {
 
         Intent intentLogin = new Intent(this, LoginPage.class);
         if (!(Password.getText().toString().equals(RePassword.getText().toString())))
             Toast.makeText(this, "Password did not match", Toast.LENGTH_SHORT).show();
-
         else if (Password.getText().toString().length() < 8) {
             Toast.makeText(this, "Needs to be at least 8 characters", Toast.LENGTH_SHORT).show();
         } else if (!passwordStringCheck()) {
             Toast.makeText(this, "One uppercase letter, lowercase letter, special character and number is required", Toast.LENGTH_SHORT).show();
-        }
-        else startActivity(intentLogin);
+        } else if (!emailStringCheck()) {
+            Toast.makeText(this, "Not a valid Email", Toast.LENGTH_SHORT).show();
+        } else startActivity(intentLogin);
     }
 }
