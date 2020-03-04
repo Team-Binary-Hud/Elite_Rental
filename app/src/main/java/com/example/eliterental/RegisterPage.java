@@ -18,7 +18,6 @@ public class RegisterPage extends AppCompatActivity {
     private EditText Password;
     private EditText RePassword;
     private Button RegisterButton;
-    private TextView Register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,7 @@ public class RegisterPage extends AppCompatActivity {
         Password = findViewById(R.id.RegisterPassword);
         RePassword = findViewById(R.id.RegisterRePassword);
         RegisterButton = findViewById(R.id.RegistrationButton);
-        Register = findViewById(R.id.RegisterPageTitle);
+
 
         RegisterButton.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -44,7 +43,7 @@ public class RegisterPage extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    public boolean passwordStringCheck() {
+    private boolean passwordStringCheck() {
         char ch;
         boolean capitalFlag = false;
         boolean lowerCaseFlag = false;
@@ -67,17 +66,29 @@ public class RegisterPage extends AppCompatActivity {
         return false;
     }
 
-    public boolean emailStringCheck() {
-        char ch;
+    private boolean emailStringCheck() {
         boolean email = false;
 
         String emailText = Email.getText().toString();
-        if (!emailText.startsWith("@") || !emailText.endsWith("@") || emailText.contains("@") || emailText.length() > 6 || emailText.contains(".com") || emailText.contains(".co.uk")){
+        if (!emailText.startsWith("@") || !emailText.endsWith("@") || emailText.contains("@") || emailText.length() > 6 || emailText.endsWith(".com") || emailText.endsWith(".co.uk")) {
             email = true;
         }
 
         if (email) return true;
         else return false;
+    }
+
+    private boolean nameChecker() {
+        boolean name = true;
+        char ch;
+        String nameText = Name.getText().toString();
+
+        for (int i = 0; i < Password.getText().length(); i++) {
+            ch = Password.getText().charAt(i);
+            if (Character.isDigit(ch))
+                name = false;
+        }
+        return name;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -87,11 +98,13 @@ public class RegisterPage extends AppCompatActivity {
         if (!(Password.getText().toString().equals(RePassword.getText().toString())))
             Toast.makeText(this, "Password did not match", Toast.LENGTH_SHORT).show();
         else if (Password.getText().toString().length() < 8) {
-            Toast.makeText(this, "Needs to be at least 8 characters", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Password needs to be at least 8 characters", Toast.LENGTH_SHORT).show();
         } else if (!passwordStringCheck()) {
-            Toast.makeText(this, "One uppercase letter, lowercase letter, special character and number is required", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Password needs at least:\nOne Uppercase:One Lowercase:\nOne Special Character:One Number", Toast.LENGTH_LONG).show();
         } else if (!emailStringCheck()) {
             Toast.makeText(this, "Not a valid Email", Toast.LENGTH_SHORT).show();
+//        } else if () {
+
         } else startActivity(intentLogin);
     }
 }
