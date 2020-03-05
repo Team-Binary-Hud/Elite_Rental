@@ -13,7 +13,7 @@ import java.util.List;
 
 public class SearchPage extends AppCompatActivity {
 
-    public static Integer CarRentalID;
+    public static RentalCars CarRentalID;
     private List<RentalCars> erxamplelist;
 
     @Override
@@ -41,7 +41,7 @@ public class SearchPage extends AppCompatActivity {
     AdapterView.OnItemClickListener OnItemClick = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            //CarRentalID = erxamplelist.get(position).getCarRentalID();
+            CarRentalID = erxamplelist.get(position);
             ViewRentalPage();
         }
     };
