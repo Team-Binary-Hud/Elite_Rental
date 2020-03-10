@@ -7,16 +7,35 @@
     <string name="item_5">Item 5</string>
     =======
     <string name="app_name">EliteRental</string>
-    <string name="title_activity_list_view_rental">ListViewRental</string>
-    <string name="title_activity_rental_page">RentalPage</string>
     <string name="Terms">TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue TextValue </string>
-    <string name="post_code">Post Code</string>
-    <string name="name">Name</string>
-    <string name="enter_details_below">Enter Details Below</string>
-    <string name="phone_number">Phone Number</string>
-    <string name="e_mail">E-Mail</string>
-    <string name="register">Register</string>
-    <string name="re_enter_password">Re enter Password</string>
-    <string name="password">Password</string>
-    >>>>>>> 3dec1d0d4f5a8a71ec5c125bda933251cb9e637f
+
+    <string name="name">Elite Rental</string>
+
+    <string name="title_activity_list_view_rental">ListViewRental</string>
+    <string name="title_confirm_rental">Confirm Rental</string>
+    <string name="title_main_page">Main Page</string>
+
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    <string name="create_button">Create</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="close_button">Close</string>
+    <string name="search_page_button">Search Page</string>
+    <string name="locations_page_button">Locations Page</string>
+    <string name="accounts_page_button">Accounts Page</string>
+    <string name="previous_rentals_button">Previous Rentals</string>
+
+    <string name="title_activity_rental_page">RentalPage</string>
+
+    <string name="name_tf">Name</string>
+    <string name="phone_tf">Phone Number</string>
+    <string name="address_tf">Address</string>
+    <string name="email">E-Mail</string>
+    <string name="username_tf">Username</string>
+    <string name="password_tf">Password</string>
+    <string name="password_confirm_tf">Re-Enter Password</string>
+
+    <string name="logo_alt_text">Elite Rental Logo</string>
+    <string name="title_activity_find_free_dropoff">find_free_dropoff</string>
 </resources>
