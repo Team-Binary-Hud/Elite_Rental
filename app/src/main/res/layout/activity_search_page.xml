@@ -4,6 +4,7 @@
     android:paddingRight="1dp"
     android:paddingTop="0dp"
     android:paddingBottom="0dp"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".SearchPage">
 

@@ -14,7 +14,7 @@ public class RentalRecipt extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receipt);
-        TextView CarName = (TextView)findViewById(R.id.CarName);
+        /*TextView CarName = (TextView)findViewById(R.id.CarName);
         TextView CarReceipt = (TextView)findViewById(R.id.CarReceipt);
         TextView CarDate = (TextView)findViewById(R.id.CarDate);
         TextView CarRentalLen = (TextView)findViewById(R.id.CarRentalLen);
@@ -38,7 +38,7 @@ public class RentalRecipt extends AppCompatActivity {
         CarType.setText(SearchPage.CarRentalID.getCarType()+" - "+"SEATS"+ " - "+SearchPage.CarRentalID.getCarColour());
         CarLocation.setText("Location: " + SearchPage.CarRentalID.getLocation());
         CarYear.setText(SearchPage.CarRentalID.getManufac()+" - "+SearchPage.CarRentalID.getCarYear());
-        CarBox.setText(CarBoxID +" - Code:" +BoxCode);
+        CarBox.setText(CarBoxID +" - Code:" +BoxCode);*/
     }
 
     public void closeReceipt(View view) {
