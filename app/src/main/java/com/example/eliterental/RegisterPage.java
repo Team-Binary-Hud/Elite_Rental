@@ -158,9 +158,6 @@ public class RegisterPage extends AppCompatActivity {
         boolean phoneN = true;
         char ch;
         int phoneNumLength = 0;
-        char firstChar;
-
-        firstChar = phoneNumber.getText().charAt(0);
 
         for (int i = 0; i < this.phoneNumber.getText().length(); i++) {
             ch = this.phoneNumber.getText().charAt(i);
@@ -172,10 +169,8 @@ public class RegisterPage extends AppCompatActivity {
                 phoneN = false;
             else if (Character.isDigit(ch))
                 phoneNumLength++;
-            else if (firstChar != 0)
-                phoneN = false;
         }
-        return phoneN && phoneNumLength == 11;
+        return phoneN && phoneNumLength == 10;
     }
 
     private boolean postCodeCheck() {
@@ -218,7 +213,7 @@ public class RegisterPage extends AppCompatActivity {
         } else if (password.getText().toString().length() < 8) {
             Toast.makeText(this, "Password needs to be at least 8 characters", Toast.LENGTH_SHORT).show();
         } else if (!passwordStringCheck()) {
-            Toast.makeText(this, "password needs at least:\nOne Uppercase:One Lowercase:\nOne Special Character:One Number", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Password needs at least:\nOne Uppercase:One Lowercase:\nOne Special Character:One Number", Toast.LENGTH_LONG).show();
         } else if (!(password.getText().toString().equals(rePassword.getText().toString()))) {
             Toast.makeText(this, "Password entered did not match", Toast.LENGTH_SHORT).show();
         } else if (!licenceCheck()) {
