@@ -11,13 +11,16 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class RegisterPage extends AppCompatActivity {
     private EditText name;
     private EditText email;
     private EditText password;
     private EditText rePassword;
     private EditText phoneNumber;
-    private Button registerButton;
+    private EditText postCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +32,8 @@ public class RegisterPage extends AppCompatActivity {
         phoneNumber = findViewById(R.id.phoneNumber);
         password = findViewById(R.id.RegisterPassword);
         rePassword = findViewById(R.id.RegisterRePassword);
-        registerButton = findViewById(R.id.RegistrationButton);
-
+        Button registerButton = findViewById(R.id.RegistrationButton);
+        postCode = findViewById(R.id.addressPostCode);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -76,8 +79,7 @@ public class RegisterPage extends AppCompatActivity {
             email = true;
         }
 
-        if (email) return true;
-        else return false;
+        return email;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -95,8 +97,7 @@ public class RegisterPage extends AppCompatActivity {
             else if (Character.isWhitespace(ch))
                 whiteSpaces++;
         }
-        if (!name || whiteSpaces > 1) return false;
-        else return true;
+        return name && whiteSpaces <= 1;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -116,15 +117,15 @@ public class RegisterPage extends AppCompatActivity {
             else if (Character.isDigit(ch))
                 phoneNumLength++;
         }
-        if (!phoneN || phoneNumLength != 10) return false;
-        else return true;
+        return phoneN && phoneNumLength == 10;
     }
 
     private boolean postCodeCheck() {
-        boolean postCode = true;
-        char ch;
+        String regex = "^[A-Z]{1,2}[0-9R][0-9A-Z]? [0-9][ABD-HJLNP-UW-Z]{2}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(postCode.getText().toString());
 
-        return false;
+        return matcher.matches();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -133,10 +134,12 @@ public class RegisterPage extends AppCompatActivity {
         Intent intentLogin = new Intent(this, LoginPage.class);
         if (!nameStringCheck() || name.getText().toString().isEmpty()) {
             Toast.makeText(this, "Not a valid name", Toast.LENGTH_SHORT).show();
-        } else if (!emailStringCheck()) {
-            Toast.makeText(this, "Not a valid email", Toast.LENGTH_SHORT).show();
         } else if (!phoneStringCheck() || phoneNumber.getText().toString().isEmpty()) {
             Toast.makeText(this, "Not a valid Number", Toast.LENGTH_SHORT).show();
+        } else if(!postCodeCheck()){
+            Toast.makeText(this, "Not a valid Post Code", Toast.LENGTH_SHORT).show();
+        }  else if (!emailStringCheck()) {
+            Toast.makeText(this, "Not a valid email", Toast.LENGTH_SHORT).show();
         } else if (password.getText().toString().length() < 8) {
             Toast.makeText(this, "Password needs to be at least 8 characters", Toast.LENGTH_SHORT).show();
         } else if (!passwordStringCheck()) {
