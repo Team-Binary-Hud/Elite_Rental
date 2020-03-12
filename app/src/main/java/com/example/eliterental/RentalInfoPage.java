@@ -25,18 +25,18 @@ public class RentalInfoPage extends AppCompatActivity {
         TextView CarColour = (TextView)findViewById(R.id.CarColour);
         ImageView ColourImg = (ImageView)findViewById(R.id.ColourImg);
         ImageView ManufacImg = (ImageView)findViewById(R.id.ManufacImg);
-        ImageView imageView = (ImageView)findViewById(R.id.imageView);
+        ImageView imageView = (ImageView)findViewById(R.id.imageView);*/
 
-        ColourImg.setColorFilter(ColourImg.getResources().getColor(R.color.Yellow));
+        //ColourImg.setColorFilter(ColourImg.getResources().getColor(R.color.Yellow));
 
-        CarName.setText(SearchPage.CarRentalID.getCarRentalID());
-        CarPrice.setText((int) SearchPage.CarRentalID.getRentalPrice());
-        CarType.setText(SearchPage.CarRentalID.getCarType());
+        //CarName.setText(SearchPage.CarRentalID.getCarRentalID());
+        //CarPrice.setText((int) SearchPage.CarRentalID.getRentalPrice());
+        //CarType.setText(SearchPage.CarRentalID.getCarType());
         //CarSeatsNum.setText(SearchPage.CarRentalID.);
-        CarLocation.setText(SearchPage.CarRentalID.getLocation());
-        CarManufac.setText(SearchPage.CarRentalID.getManufac());
-        CarYear.setText(SearchPage.CarRentalID.getCarYear());
-        CarColour.setText(SearchPage.CarRentalID.getCarColour());*/
+        //CarLocation.setText(SearchPage.CarRentalID.getLocation());
+        //CarManufac.setText(SearchPage.CarRentalID.getManufac());
+        //CarYear.setText(SearchPage.CarRentalID.getCarYear());
+        //CarColour.setText(SearchPage.CarRentalID.getCarColour());
     }
 
     public void openConfirm(View view) {
