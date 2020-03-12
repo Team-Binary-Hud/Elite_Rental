@@ -1,56 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/MainPageText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Main Page"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/Search_button"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/textFieldWidth"
         android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
         android:onClick="openSearchPage"
-        android:text="Search Page"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/MainPageText"
-        android:layout_centerHorizontal="true"/>
+        android:text="@string/search_page_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_wrapHeight="126"
+        tools:layout_conversion_wrapWidth="788" />
 
     <Button
         android:id="@+id/locations_button"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/textFieldWidth"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:onClick="openMapsPage"
-        android:text="Locations Page"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/Search_button"
-        android:layout_centerHorizontal="true"/>
+        android:text="@string/locations_page_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Search_button"
+        tools:layout_conversion_wrapHeight="126"
+        tools:layout_conversion_wrapWidth="788" />
 
     <Button
         android:id="@+id/accounts_button"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/textFieldWidth"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:onClick="openAccountsPage"
-        android:text="Account Page"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/locations_button"
-        android:layout_centerHorizontal="true"/>
+        android:text="@string/accounts_page_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locations_button"
+        tools:layout_conversion_wrapHeight="126"
+        tools:layout_conversion_wrapWidth="788" />
 
-    <Button
-        android:id="@+id/pastRentals_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="openPastRentalsPage"
-        android:text="Previous Rentals"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/accounts_button"
-        android:layout_centerHorizontal="true"/>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

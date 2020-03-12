@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#4284ac</color>
+    <color name="colorPrimaryDark">#2e739b</color>
     <color name="colorAccent">#D81B60</color>
 
     <color name="Black">#D81B60</color>
@@ -13,4 +13,9 @@
     <color name="Purple">#D81B60</color>
     <color name="Silver">#D81B60</color>
     <color name="Pink">#D81B60</color>
+
+    <color name="background">#4c8cb5</color>
+    <color name="backgroundAccent">#447ea4</color>
+    <color name="yellow">#ffff00</color>
+    <color name="black">#000000</color>
 </resources>

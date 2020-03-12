@@ -14,7 +14,7 @@ public class RentalInfoPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rental_info_page);
-        TextView CarName = (TextView)findViewById(R.id.CarName);
+        /*TextView CarName = (TextView)findViewById(R.id.CarName);
         TextView CarPrice = (TextView)findViewById(R.id.CarPrice);
         TextView CarType = (TextView)findViewById(R.id.CarType);
         TextView CarSeatsInfo = (TextView)findViewById(R.id.CarSeatsInfo);
@@ -36,7 +36,7 @@ public class RentalInfoPage extends AppCompatActivity {
         CarLocation.setText(SearchPage.CarRentalID.getLocation());
         CarManufac.setText(SearchPage.CarRentalID.getManufac());
         CarYear.setText(SearchPage.CarRentalID.getCarYear());
-        CarColour.setText(SearchPage.CarRentalID.getCarColour());
+        CarColour.setText(SearchPage.CarRentalID.getCarColour());*/
     }
 
     public void openConfirm(View view) {
