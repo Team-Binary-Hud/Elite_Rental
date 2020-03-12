@@ -8,99 +8,90 @@
     tools:context=".RentalInfoPage">
 
 <ImageView
-    android:id="@+id/imageView"
+    android:id="@+id/RentalImg"
     android:layout_width="fill_parent"
     android:layout_height="300dp"
     app:srcCompat="@mipmap/ic_launcher" />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/CarName"
+    android:id="@+id/CarNameRental"
     android:text="CarName"
-    android:layout_below="@id/imageView"
+    android:layout_below="@id/RentalImg"
     android:textAppearance="?android:attr/textAppearanceLarge"
     android:layout_marginTop="10dp"
     android:layout_marginLeft="15dp" />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/CarPrice"
+    android:id="@+id/CarPriceRental"
     android:text="£00.00 pm"
     android:textAppearance="?android:attr/textAppearanceMedium"
     android:layout_alignParentRight="true"
-    android:layout_below="@id/CarName"
+    android:layout_below="@id/CarNameRental"
     android:layout_marginTop="3dp"
     android:layout_marginRight="15dp" />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/CarType"
+    android:id="@+id/CarTypeRental"
     android:text="CarType"
     android:textAppearance="?android:attr/textAppearanceMedium"
-    android:layout_below="@id/CarYear"
+    android:layout_below="@id/CarYearRental"
     android:layout_marginTop="3dp"
     android:layout_marginLeft="15dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CarSeatsInfo"
+        android:id="@+id/CarSeatsInfoRental"
         android:text="Number of Seats: "
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_below="@id/CarType"
+        android:layout_below="@id/CarTypeRental"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="15dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CarSeatsNum"
+        android:id="@+id/CarSeatsNumRental"
         android:text="5"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_below="@id/CarType"
-        android:layout_toRightOf="@+id/CarSeatsInfo"
+        android:layout_below="@id/CarTypeRental"
+        android:layout_toRightOf="@+id/CarSeatsInfoRental"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="15dp" />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/CarLocation"
+    android:id="@+id/CarLocationRental"
     android:text="Location"
     android:textAppearance="?android:attr/textAppearanceMedium"
-    android:layout_below="@id/CarSeatsInfo"
+    android:layout_below="@id/CarSeatsInfoRental"
     android:layout_marginTop="3dp"
     android:layout_marginLeft="15dp" />
-<ImageView
-    android:id="@+id/ManufacImg"
-    android:layout_width="20dp"
-    android:layout_height="20sp"
-    app:srcCompat="@drawable/circle"
-    android:layout_below="@id/CarLocation"
-    android:layout_marginTop="3dp"
-    android:layout_marginLeft="15dp"
-    tools:ignore="VectorDrawableCompat" />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/CarManufac"
+    android:id="@+id/CarManufacRental"
     android:text="Manufacturer"
     android:textAppearance="?android:attr/textAppearanceMedium"
-    android:layout_below="@id/CarLocation"
+    android:layout_below="@id/CarLocationRental"
     android:layout_toRightOf="@+id/ManufacImg"
     android:layout_marginTop="3dp"
-    android:layout_marginLeft="10dp" />
+    android:layout_marginLeft="15dp" />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/CarYear"
+    android:id="@+id/CarYearRental"
     android:text="2020"
     android:textAppearance="?android:attr/textAppearanceMedium"
-    android:layout_below="@id/CarPrice"
+    android:layout_below="@id/CarPriceRental"
     android:layout_marginTop="3dp"
     android:layout_marginLeft="15dp" />
 <ImageView
-    android:id="@+id/ColourImg"
+    android:id="@+id/ColourImgRental"
     android:layout_width="20dp"
     android:layout_height="20sp"
-    android:layout_below="@id/CarManufac"
+    android:layout_below="@id/CarManufacRental"
     app:srcCompat="@drawable/circle"
     android:layout_marginTop="3dp"
     android:layout_marginLeft="15dp"
@@ -109,18 +100,18 @@
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/CarColour"
+    android:id="@+id/CarColourRental"
     android:text="Colour"
     android:textAppearance="?android:attr/textAppearanceMedium"
-    android:layout_below="@id/CarManufac"
-    android:layout_toRightOf="@+id/ColourImg"
+    android:layout_below="@id/CarManufacRental"
+    android:layout_toRightOf="@+id/ColourImgRental"
     android:layout_marginTop="3dp" />
 
     <Button
         android:id="@+id/rent_button"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_below="@id/CarColour"
+        android:layout_below="@id/CarColourRental"
         android:layout_alignParentRight="true"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"

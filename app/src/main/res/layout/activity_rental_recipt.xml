@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CarName"
+        android:id="@+id/CarNameRental"
         android:text="Receipt - CarName (AB18 FVT)"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginTop="10dp"
@@ -21,7 +21,7 @@
         android:id="@+id/CarReceipt"
         android:text="Receipt ID: 20FB-RTY890"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_below="@id/CarName"
+        android:layout_below="@id/CarNameRental"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="15dp" />
     <TextView
@@ -45,7 +45,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CarPrice"
+        android:id="@+id/CarPriceRental"
         android:text="Total Cost: £00.00"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_alignParentRight="true"
@@ -55,29 +55,29 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CarType"
+        android:id="@+id/CarTypeRental"
         android:text="CarType - 5 Seats - Colour"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_below="@id/CarYear"
+        android:layout_below="@id/CarYearRental"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="15dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CarLocation"
+        android:id="@+id/CarLocationRental"
         android:text="Location"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_below="@id/CarType"
+        android:layout_below="@id/CarTypeRental"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="15dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CarYear"
+        android:id="@+id/CarYearRental"
         android:text="Manufacturer - 2020"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_below="@id/CarPrice"
+        android:layout_below="@id/CarPriceRental"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="15dp" />
     <TextView
@@ -86,7 +86,7 @@
         android:id="@+id/CarBox"
         android:text="Box A1 - Code: 785945"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_below="@id/CarLocation"
+        android:layout_below="@id/CarLocationRental"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="15dp" />
 

@@ -4,18 +4,16 @@
     <color name="colorPrimaryDark">#2e739b</color>
     <color name="colorAccent">#D81B60</color>
 
-    <color name="Black">#D81B60</color>
-    <color name="White">#D81B60</color>
-    <color name="Yellow">#D81B60</color>
-    <color name="Blue">#D81B60</color>.
-    <color name="Red">#D81B60</color>
-    <color name="Green">#D81B60</color>
-    <color name="Purple">#D81B60</color>
-    <color name="Silver">#D81B60</color>
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Yellow">#ffff00</color>
+    <color name="Blue">#2e739b</color>.
+    <color name="Red">#C0392B</color>
+    <color name="Green">#229954</color>
+    <color name="Purple">#6C3483</color>
+    <color name="Silver">#839192</color>
     <color name="Pink">#D81B60</color>
 
     <color name="background">#4c8cb5</color>
     <color name="backgroundAccent">#447ea4</color>
-    <color name="yellow">#ffff00</color>
-    <color name="black">#000000</color>
 </resources>
