@@ -7,28 +7,13 @@
     android:background="@color/background"
     tools:context=".RegisterPage">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="@dimen/logoBig"
-        android:layout_height="@dimen/logoBig"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:contentDescription="@string/logo_alt_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/eliterentallogo" />
-
     <EditText
         android:id="@+id/RegisterName"
         android:layout_width="@dimen/textFieldWidth"
         android:layout_height="@dimen/SmallTextFieldHeight"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
@@ -37,7 +22,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/phoneNumber"
@@ -57,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/RegisterName" />
 
     <EditText
-        android:id="@+id/address"
+        android:id="@+id/addressPostCode"
         android:layout_width="@dimen/textFieldWidth"
         android:layout_height="@dimen/SmallTextFieldHeight"
         android:layout_marginStart="8dp"
@@ -66,7 +51,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
-        android:hint="@string/address_tf"
+        android:hint="@string/post_code"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -88,7 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address" />
+        app:layout_constraintTop_toBottomOf="@+id/addressPostCode" />
 
     <EditText
         android:id="@+id/DateOfBirth"
@@ -100,7 +85,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
-        android:hint="Date Of Birth"
+        android:hint="@string/date_of_birth"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -166,11 +151,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
-        android:hint="License Number"
+        android:hint="@string/license_number"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterRePassword" />
+        app:layout_constraintTop_toBottomOf="@+id/RegisterRePassword"
+        tools:ignore="TextFields" />
 
     <EditText
         android:id="@+id/LicenseDOE"
@@ -182,9 +168,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
-        android:hint="License Date Of Expiry"
+        android:hint="@string/license_date_of_expiry"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LicenseNumber" />
 
