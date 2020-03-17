@@ -92,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/RegisterEmail" />
 
     <EditText
-        android:id="@+id/Username"
+        android:id="@+id/username"
         android:layout_width="@dimen/textFieldWidth"
         android:layout_height="@dimen/SmallTextFieldHeight"
         android:layout_marginStart="8dp"
@@ -122,7 +122,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Username" />
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <EditText
         android:id="@+id/RegisterRePassword"

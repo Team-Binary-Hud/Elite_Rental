@@ -37,7 +37,7 @@ public class RegisterPage extends AppCompatActivity {
         setContentView(R.layout.activity_register_page);
 
         licence = findViewById(R.id.LicenseNumber);
-        userName = findViewById(R.id.usernametext);
+        userName = findViewById(R.id.username);
         licenceDate = findViewById(R.id.LicenseDOE);
         name = findViewById(R.id.RegisterName);
         email = findViewById(R.id.RegisterEmail);
@@ -76,7 +76,6 @@ public class RegisterPage extends AppCompatActivity {
                 int day = cldr.get(Calendar.DAY_OF_MONTH);
                 int month = cldr.get(Calendar.MONTH);
                 int year = cldr.get(Calendar.YEAR);
-                // date picker dialog
                 datePicker = new DatePickerDialog(RegisterPage.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
@@ -186,7 +185,14 @@ public class RegisterPage extends AppCompatActivity {
     }
 
     private boolean userNameCheck() {
-        return userName.getText().length() > 4 && userName.length() <= 10;
+        String userNameString = userName.getText().toString();
+        boolean userCheck = true;
+
+        if (userNameString.isEmpty())
+            userCheck = false;
+        if (userNameString.length() < 4 || userNameString.length() > 11)
+            userCheck = false;
+        return userCheck;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
