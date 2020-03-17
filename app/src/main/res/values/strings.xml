@@ -38,4 +38,8 @@
 
     <string name="logo_alt_text">Elite Rental Logo</string>
     <string name="title_activity_find_free_dropoff">find_free_dropoff</string>
+    <string name="post_code">Post Code</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="license_number">License Number</string>
+    <string name="license_date_of_expiry">License Date Of Expiry</string>
 </resources>
