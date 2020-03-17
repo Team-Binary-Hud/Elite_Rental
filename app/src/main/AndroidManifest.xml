@@ -11,13 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PastRentals"></activity>
+        <activity android:name=".PastRentals" />
         <activity android:name=".RentalRecipt" />
         <activity android:name=".ConfirmPage" />
         <activity android:name=".RentalInfoPage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SearchPage" />
+        </activity>
+        <activity android:name=".AccountPage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity android:name=".SearchPage">
             <meta-data

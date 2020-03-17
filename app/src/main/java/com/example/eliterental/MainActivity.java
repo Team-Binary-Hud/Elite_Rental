@@ -1,13 +1,12 @@
 package com.example.eliterental;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +14,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button accountButton = findViewById(R.id.accounts_button);
+
+        accountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAccountsPage();
+            }
+        });
     }
 
     public void openSearchPage(View view) {
@@ -25,9 +33,11 @@ public class MainActivity extends AppCompatActivity {
     public void openMapsPage(View view) {
     }
 
-    public void openAccountsPage(View view) {
+    public void openAccountsPage() {
+        Intent intentAccount = new Intent(this, AccountPage.class);
+        startActivity(intentAccount);
     }
 
-    public void openPastRentalsPage(View view) {
+    public void openLocationsPage(View view) {
     }
 }

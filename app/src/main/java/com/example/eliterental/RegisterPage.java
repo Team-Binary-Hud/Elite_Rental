@@ -1,31 +1,68 @@
 package com.example.eliterental;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
+import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegisterPage extends AppCompatActivity {
+public class RegisterPage extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     private EditText name;
     private EditText email;
     private EditText password;
     private EditText rePassword;
     private EditText phoneNumber;
     private EditText postCode;
+    private EditText licenceNumber;
+    private EditText licenceDate;
+
+    private static final String TAG = "RegisterPage";
+
+    private DatePickerDialog.OnDateSetListener dateSetListener;
+    private TextView mDisplayDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_page);
+
+        mDisplayDate = findViewById(R.id.date);
+
+        mDisplayDate.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+            @Override
+            public void onClick(View v) {
+                DialogFragment datePicker = new DatePickerFragment();
+                datePicker.show(getSupportFragmentManager(), "date picker");
+            }
+        });
+
+        dateSetListener = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                month = month + 1;
+
+                Log.d(TAG, "onDateSet : mm/dd/yyy: " + month + "/" + dayOfMonth + "/" + year);
+                String date = month + "/" + dayOfMonth + "/" + year;
+                mDisplayDate.setText(date);
+            }
+        };
 
         name = findViewById(R.id.RegisterName);
         email = findViewById(R.id.RegisterEmail);
@@ -34,6 +71,8 @@ public class RegisterPage extends AppCompatActivity {
         rePassword = findViewById(R.id.RegisterRePassword);
         Button registerButton = findViewById(R.id.RegistrationButton);
         postCode = findViewById(R.id.addressPostCode);
+        licenceNumber = findViewById(R.id.LicenseNumber);
+        licenceDate = findViewById(R.id.LicenseDOE);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -105,6 +144,9 @@ public class RegisterPage extends AppCompatActivity {
         boolean phoneN = true;
         char ch;
         int phoneNumLength = 0;
+        char firstChar;
+
+        firstChar = phoneNumber.getText().charAt(0);
 
         for (int i = 0; i < this.phoneNumber.getText().length(); i++) {
             ch = this.phoneNumber.getText().charAt(i);
@@ -116,8 +158,10 @@ public class RegisterPage extends AppCompatActivity {
                 phoneN = false;
             else if (Character.isDigit(ch))
                 phoneNumLength++;
+            else if (firstChar != 0)
+                phoneN = false;
         }
-        return phoneN && phoneNumLength == 10;
+        return phoneN && phoneNumLength == 11;
     }
 
     private boolean postCodeCheck() {
@@ -128,6 +172,10 @@ public class RegisterPage extends AppCompatActivity {
         return matcher.matches();
     }
 
+    private boolean licenceCheck() {
+        return licenceNumber.getText().toString().length() == 16;
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void credentialChecker() {
 
@@ -136,9 +184,9 @@ public class RegisterPage extends AppCompatActivity {
             Toast.makeText(this, "Not a valid name", Toast.LENGTH_SHORT).show();
         } else if (!phoneStringCheck() || phoneNumber.getText().toString().isEmpty()) {
             Toast.makeText(this, "Not a valid Number", Toast.LENGTH_SHORT).show();
-        } else if(!postCodeCheck()){
+        } else if (!postCodeCheck()) {
             Toast.makeText(this, "Not a valid Post Code", Toast.LENGTH_SHORT).show();
-        }  else if (!emailStringCheck()) {
+        } else if (!emailStringCheck()) {
             Toast.makeText(this, "Not a valid email", Toast.LENGTH_SHORT).show();
         } else if (password.getText().toString().length() < 8) {
             Toast.makeText(this, "Password needs to be at least 8 characters", Toast.LENGTH_SHORT).show();
@@ -147,5 +195,17 @@ public class RegisterPage extends AppCompatActivity {
         } else if (!(password.getText().toString().equals(rePassword.getText().toString()))) {
             Toast.makeText(this, "Password entered did not match", Toast.LENGTH_SHORT).show();
         } else startActivity(intentLogin);
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, year);
+        c.set(Calendar.MONTH, month);
+        c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+        String currentDate = DateFormat.getDateInstance().format(c.getTime());
+
+        mDisplayDate.setText(currentDate);
     }
 }
