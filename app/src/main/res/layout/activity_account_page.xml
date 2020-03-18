@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".AccountPage">
 
     <Button
@@ -36,8 +37,8 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="377dp"
-        android:layout_height="446dp"
+        android:layout_width="370dp"
+        android:layout_height="360dp"
         app:layout_constraintBottom_toTopOf="@+id/showRentals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

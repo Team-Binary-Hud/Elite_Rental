@@ -16,6 +16,7 @@ public class AccountPage extends AppCompatActivity {
     Button showRentals, showDetails;
     ListView listView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +33,9 @@ public class AccountPage extends AppCompatActivity {
 
         listView.setVisibility(View.INVISIBLE);
 
-        listOfDetails.add("Name:  Luqmaan");
+        listOfDetails.add("Name:  Mike");
         listOfDetails.add("Number:  01111111111");
-        listOfDetails.add("Email:  lucky@gmail.com");
+        listOfDetails.add("Email:  mike@gmail.com");
 
         listOfRentals.add("tesla x");
         listOfRentals.add("mini");
